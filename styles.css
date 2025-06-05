@@ -30,6 +30,7 @@ nav > ul {
   /*Used the child combinator selector (>) Targets all children of <nav> that are <ul>s */
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 #logo {
