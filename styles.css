@@ -26,6 +26,10 @@ h2 {
   border-bottom: 4px solid #dfdfe2;
 }
 
+h3::before {
+  content: "Question #";
+}
+
 nav > ul {
   /*Used the child combinator selector (>) Targets all children of <nav> that are <ul>s */
   display: flex;
