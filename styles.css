@@ -15,14 +15,14 @@ header {
   top: 0;
 }
 
-main {
-  padding-top: 25px;
-}
-
-section {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto 10px;
+#logo {
+  width: max(
+    10rem,
+    18vw
+  ); /* used the width() to set the minimum value for the img */
+  background-color: #0a0a23;
+  aspect-ratio: 35 / 4;
+  padding: 0.4rem;
 }
 
 h1 {
@@ -31,22 +31,12 @@ h1 {
   text-align: center;
 }
 
-h1,
-h2 {
-  font-family: Verdana, Tahoma;
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
 }
 
-h2 {
-  border-bottom: 4px solid #dfdfe2;
-  margin-top: 0;
-  padding-top: 60px;
-}
-
-h3::before {
-  content: "Question #";
-}
-
-/* NAVBAR */
 nav > ul {
   /*Used the child combinator selector (>) Targets all children of <nav> that are <ul>s */
   display: flex;
@@ -77,14 +67,52 @@ li > a {
   text-decoration: none;
 }
 
-#logo {
-  width: max(
-    10rem,
-    18vw
-  ); /* used the width() to set the minimum value for the img */
-  background-color: #0a0a23;
-  aspect-ratio: 35 / 4;
-  padding: 0.4rem;
+main {
+  padding-top: 25px;
+}
+
+section {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+h1,
+h2 {
+  font-family: Verdana, Tahoma;
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+.info {
+  padding: 10px 0 0 5px;
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0px 15px;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+}
+
+h3::before {
+  content: "Question #";
 }
 
 /* The following block of code makes the 'questions' labels invisible to the eye while still being able to be read by screen readers */
