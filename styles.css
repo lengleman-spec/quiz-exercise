@@ -10,11 +10,19 @@ header {
   height: 50px;
   background-color: #1b1b32;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+main {
+  padding-top: 25px;
 }
 
 h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em);
+  text-align: center;
 }
 
 h1,
@@ -30,11 +38,35 @@ h3::before {
   content: "Question #";
 }
 
+/* NAVBAR */
 nav > ul {
   /*Used the child combinator selector (>) Targets all children of <nav> that are <ul>s */
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
   width: 100%;
+}
+
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #logo {
@@ -47,7 +79,6 @@ nav > ul {
   padding: 0.4rem;
 }
 
-/* Question section */
 /* The following block of code makes the 'questions' labels invisible to the eye while still being able to be read by screen readers */
 .sr-only {
   position: absolute;
